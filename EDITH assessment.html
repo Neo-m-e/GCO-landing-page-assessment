@@ -9,39 +9,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --gco-blue: #007bff;
-            --gco-dark: #0056b3;
-            --gco-coral: #ff6b6b; 
-            --gco-bg: #f4f7f9;
-        }
-
+        
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--gco-bg);
+            background-color: #f4f7f9; 
             color: #444;
-            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
         }
 
-        /* --- NAVIGATION --- */
+        /*navigation*/
         header {
-            background: #fff;
+            background-color: #ffffff;
             padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid #eee;
         }
 
-        .logo-area {
+        .logo-text {
+            color: #ff6b6b; 
+            font-weight: bold;
+            font-size: 24px;
             display: flex;
             align-items: center;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--gco-coral);
         }
 
-        .logo-area img {
+        .logo-text img {
             height: 40px;
             margin-right: 10px;
         }
@@ -50,97 +42,98 @@
             list-style: none;
             display: flex;
             margin: 0;
-            gap: 25px;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 25px;
         }
 
         nav ul li a {
             color: #666;
             text-decoration: none;
             font-weight: 600;
-            transition: 0.3s;
         }
 
         nav ul li a:hover {
-            color: var(--gco-blue);
-            text-underline-offset: 5px;
+            color: #007bff; 
         }
 
-        /* --- HERO SECTION --- */
-        .jumbotron {
-            background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+        /*hero section*/
+       .hero-banner {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.8) 0%, rgba(235, 132, 132, 0.6) 100%), 
+                        url('https://i.ibb.co/rfZMfYwv/guidance.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
-            border-radius: 0;
-            padding: 100px 20px;
-            margin-bottom: 0;
+            text-align: center;
+            padding: 120px 20px; 
         }
 
-        .btn-gco {
-            background-color: var(--gco-coral);
-            border: none;
+        .btn-coral {
+            background-color: #ff6b6b;
             color: white;
             padding: 12px 30px;
-            font-weight: 600;
             border-radius: 50px;
-            transition: 0.3s;
-        }
-
-        .btn-gco:hover {
-            background-color: #ee5253;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
-        }
-
-        /* --- SERVICES SECTION --- */
-        .section {
-            padding: 80px 20px;
-        }
-
-        .service-card {
-            background: #fff;
             border: none;
+            font-weight: 600;
+        }
+
+        .btn-coral:hover {
+            background-color: #ee5253;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /*service*/
+        .main-section {
+            padding: 20px 0;
+        }
+
+        .box-card {
+            background: #fff;
             border-radius: 15px;
             padding: 30px;
             text-align: center;
-            transition: 0.4s;
             height: 100%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
 
-        .service-card:hover {
+        .box-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,123,255,0.15);
         }
 
-        .service-icon {
+        .icon-circle {
             width: 80px;
             height: 80px;
-            margin-bottom: 20px;
-            background: #eef7ff;
+            background-color: #eef7ff;
             border-radius: 50%;
             padding: 15px;
+            margin: 0 auto 20px;
         }
 
-        /* --- FOOTER --- */
+        /*footer*/
         footer {
-            background: #2d3436;
-            color: #dfe6e9;
+            background-color: #2d3436;
+            color: #dfe6e99f;
             padding: 50px 0 20px;
             text-align: center;
         }
 
-        .footer-logos img {
+        .footer-logo {
             height: 50px;
-            margin: 0 15px 20px;
-            filter: grayscale(100%) brightness(200%);
+            margin: 10px;
+            filter: brightness(100%);
         }
     </style>
 </head>
 <body>
-   
+
     <header>
         <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo-area">
-                <img src="https://cdn-icons-png.flaticon.com/512/3063/3063176.png" alt="GCO Logo"> 
+            <div class="logo-text">
+                <img src="https://i.ibb.co/vCM16pbv/gco.png" alt="Logo"> 
                 GCO Connect
             </div>
             <nav>
@@ -153,63 +146,69 @@
         </div>
     </header>
 
-    <div class="jumbotron text-center">
+    <div class="hero-banner">
         <div class="container">
-            <h1 class="display-3 font-weight-bold">Start your journey towards wellbeing</h1>
-            <p class="lead mb-4">A supportive space to empower you through professional guidance.</p>
-            <a href="#services" class="btn btn-gco btn-lg">Explore Services</a>
+            <h1 class="display-4 font-weight-bold">Start your journey towards wellbeing</h1>
+            <p class="lead">A supportive space to empower you through professional guidance.</p>
+            <br>
+            <a href="#services" class="btn btn-coral">Explore Services</a>
         </div>
     </div>
 
-    <section id="services" class="section">
+    <section id="services" class="main-section">
         <div class="container">
             <h2 class="text-center mb-5 font-weight-bold">Our Professional Services</h2>
             <div class="row">
+                
                 <div class="col-md-3 mb-4">
-                    <div class="service-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3468/3468352.png" class="service-icon" alt="Interview">
-                        <h5 class="font-weight-bold">Interview</h5>
-                        <p class="small text-muted">Gathering information to understand your unique needs and current state.</p>
+                    <div class="box-card">
+                        <img src="https://i.ibb.co/DDNgm59p/interview.png" class="icon-circle">
+                        <h5>Interview</h5>
+                        <p class="small text-muted">Gathering information to understand your unique needs.</p>
                         <button class="btn btn-outline-primary btn-sm btn-block mt-3" data-toggle="modal" data-target="#gcoModal">Learn More</button>
                     </div>
                 </div>
+
                 <div class="col-md-3 mb-4">
-                    <div class="service-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2618/2618576.png" class="service-icon" alt="Psych Test">
-                        <h5 class="font-weight-bold">Psych Test</h5>
-                        <p class="small text-muted">Standardized tools to measure abilities, tendencies, and interests.</p>
+                    <div class="box-card">
+                        <img src="https://i.ibb.co/b54tkQhK/psych-test.png" class="icon-circle">
+                        <h5>Psychological Test Administration</h5>
+                        <p class="small text-muted">Standardized tools to measure abilities and interests.</p>
                         <button class="btn btn-outline-primary btn-sm btn-block mt-3" data-toggle="modal" data-target="#gcoModal">Learn More</button>
                     </div>
                 </div>
+
                 <div class="col-md-3 mb-4">
-                    <div class="service-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/4233/4233830.png" class="service-icon" alt="Consultation">
-                        <h5 class="font-weight-bold">Consultation</h5>
-                        <p class="small text-muted">Follow-up and general concerns addressed with expert advice.</p>
+                    <div class="box-card">
+                        <img src="https://i.ibb.co/fzfbxXb2/consultation.png" class="icon-circle">
+                        <h5>Consultation</h5>
+                        <p class="small text-muted">Follow-up and general concerns addressed with expert advice. </p>
                         <button class="btn btn-outline-primary btn-sm btn-block mt-3" data-toggle="modal" data-target="#gcoModal">Learn More</button>
                     </div>
                 </div>
+
                 <div class="col-md-3 mb-4">
-                    <div class="service-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2942/2942921.png" class="service-icon" alt="Counseling">
-                        <h5 class="font-weight-bold">Counseling</h5>
-                        <p class="small text-muted">Empowering you to reach your fullest potential and wellbeing.</p>
+                    <div class="box-card">
+                        <img src="https://i.ibb.co/PGNN1Sxy/counseling.png" class="icon-circle">
+                        <h5>Counseling</h5>
+                        <p class="small text-muted">Empowering you to reach your fullest potential.</p>
                         <button class="btn btn-outline-primary btn-sm btn-block mt-3" data-toggle="modal" data-target="#gcoModal">Learn More</button>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="booking" class="section bg-white">
+    <section id="booking" class="main-section" style="background-color: white;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <h2 class="font-weight-bold">Ready to connect?</h2>
-                    <p>Select your preferred time and service. Our associates are committed to creating an emphatic atmosphere where you are heard.</p>
+                    <p>Select your preferred time and service. Our associates are here to listen.</p>
                 </div>
                 <div class="col-md-6">
-                    <div class="p-4 shadow-sm border rounded">
+                    <div style="border: 1px solid #ddd; padding: 30px; border-radius: 10px;">
                         <form id="gcoForm">
                             <input type="text" class="form-control mb-3" placeholder="Full Name" required>
                             <input type="email" class="form-control mb-3" placeholder="Student Email" required>
@@ -220,7 +219,7 @@
                                 <option>Consultation</option>
                                 <option>Counseling</option>
                             </select>
-                            <button type="submit" class="btn btn-gco btn-block">Book Appointment</button>
+                            <button type="submit" class="btn btn-coral btn-block">Book Appointment</button>
                         </form>
                     </div>
                 </div>
@@ -230,40 +229,34 @@
 
     <footer>
         <div class="container">
-            <div class="footer-logos">
-                <img src="https://cdn-icons-png.flaticon.com/512/3063/3063176.png" alt="Hub Logo">
-                <img src="https://cdn-icons-png.flaticon.com/512/3063/3063176.png" alt="Univ Logo">
-                <img src="https://cdn-icons-png.flaticon.com/512/3063/3063176.png" alt="GCO Logo">
-            </div>
-            <p class="small mt-4 opacity-50">&copy; 2026 Denise Alvaran. All Rights Reserved.</p>
+            <img src="https://i.ibb.co/TqvqX7yX/feu-logo.png" class="footer-logo">
+            <p class="small mt-4">&copy; 2026 Denise Alvaran. All Rights Reserved.</p>
         </div>
     </footer>
 
     <div class="modal fade" id="gcoModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0">
+            <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title">Service Information</h5>
+                    <h5 class="modal-title">Information</h5>
                     <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    We provide a supportive space to empower you towards your wellbeing journey. Our counselors are ready to assist.
+                    We provide a supportive space to empower you. Our counselors are ready to assist.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <a href="#booking" class="btn btn-primary" data-dismiss="modal">Proceed to Booking</a>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         document.getElementById('gcoForm').onsubmit = function(e) {
             e.preventDefault();
-            alert("Success! Your GCO Connect booking request has been sent.");
+            alert("Thank you for booking with GCO connect! Your request has been received.");
         };
     </script>
 </body>
